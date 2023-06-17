@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SCModels.ViewModels
+﻿namespace SCModels.ViewModels
 {
     public class FinalTollModel
     {
@@ -17,6 +11,15 @@ namespace SCModels.ViewModels
         public decimal Discount { get; set; }
         public decimal TotalToll { get; set; }
         public DateTime EntryTime { get; set; }
+        public bool? IsException { get; set; }
+        public string? ExceptionMessage { get; set; }
+
+    }
+
+    public class VehicleEntryResponseModel
+    {
+        public bool? IsException { get; set; }
+        public string? ExceptionMessage { get; set; }
 
     }
 }

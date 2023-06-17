@@ -1,11 +1,5 @@
 ﻿using SCModels.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
 using System.Runtime.Caching;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SCModels
 {
@@ -35,6 +29,11 @@ namespace SCModels
         public object GetVehicleRecord(string key)
         {
             return TempDB.Get(key);
+        }
+
+        public object RemoveVehicleRecord(string key)
+        {
+            return TempDB.Remove(key);
         }
 
         public Interchange GetInterchangeByName(string name)
